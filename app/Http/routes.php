@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/', function () {
+    return File::get(public_path() . '/index.html');
+});
+
 Route::get('/signup', function () {
     return view('welcome');
 });
@@ -41,7 +45,4 @@ Route::get('/deletescopedlist', ['middleware' => 'oauth:2', function(){
 }]);
 Route::get('/editdeletecopedlist', ['middleware' => 'oauth:1+2+3', function(){
 	return json_encode(array("editedlist" => array('MySQL','Oracle','Cassandra','DynamoDB', 'MongoDB'), "deletedlist" => array('MySQL','Oracle','Cassandra')));
-}]);
-Route::get('/', [function() {   
-   return json_encode(array('MySQL','Oracle','Cassandra','DynamoDB'));
 }]);
