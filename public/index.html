@@ -161,6 +161,7 @@
         display: flex;
         -webkit-flex-flow: row;
         flex-flow: row;
+        min-height: 75%;
     }
     
     #main > article {
@@ -192,6 +193,7 @@
         display: flex;
         min-height: 100px;
         background: #EEE;
+        min-height: 10%;
     }
     /* Too narrow to support three columns */
     
@@ -219,7 +221,7 @@
     </style>
 </head>
 
-<body ng-app='clicklab' ng-controller="clicklabController as clCtrl">
+<body ng-app='clicklab' ng-controller="clicklabController as clCtrl" ng-cloak>
     <header layout="row" style="display:flex;justify-content: space-between;">
         <div class="logo">
             <div flex="20"></div>
